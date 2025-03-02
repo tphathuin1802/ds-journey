@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="b0571b4f-043e-413a-a11b-10a8ee30c9cd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.ipynb_checkpoints/house-pricing-prediction-model-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Housing-Price-Asset/HousingPriceSimpleModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Housing-Price-Asset/HousingPriceSimpleModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Housing-Price-Asset/UseHousingPriceSimpleModel.py" beforeDir="false" afterPath="$PROJECT_DIR$/Housing-Price-Asset/UseHousingPriceSimpleModel.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HousingPredictionGuiApp/DataSetViewer.py" beforeDir="false" afterPath="$PROJECT_DIR$/HousingPredictionGuiApp/DataSetViewer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JupyterPackage/Readme.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JupyterPackage/USA_Housing.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/JupyterPackage/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/ui/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JupyterPackage/house-pricing-prediction-model.ipynb" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 4
+}</component>
+  <component name="ProjectId" id="2qALZuJL42zpHct1V4MMd76f9k7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.HousingPriceSimpleModel.executor": "Run",
+    "Python.MainWindowExt.executor": "Run",
+    "Python.TestMainWindowExt.executor": "Run",
+    "Python.UseHousingPriceSimpleModel.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/phath/PycharmProjects/HousingPriceProjects",
+    "settings.editor.selected.configurable": "preferences.rainbow.brackets.root"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Coding\Projects\DataProjects\MachineLearningProjects\Supervise-Learning\HousePricePrediction\Housing-Price-Asset" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-6a3326d57233-c546a90a8094-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.24807.21" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b0571b4f-043e-413a-a11b-10a8ee30c9cd" name="Changes" comment="" />
+      <created>1734100492063</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1734100492063</updated>
+    </task>
+    <servers />
+  </component>
+</project>
