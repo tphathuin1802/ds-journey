@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <title>Teachable Machine Image Model</title>
+  </head>
+  <body>
+    <div>Teachable Machine Image Model</div>
+    <button type="button" onclick="init()">Start</button>
+    <button type="button" onclick="stopRecognition()">Stop</button>
+    <div id="webcam-container"></div>
+    <div id="label-container"></div>
+
+    <script src="https://code.responsivevoice.org/responsivevoice.js?key=gVJjre4U"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+
+    <script type="text/javascript">
+      const URL = "https://teachablemachine.withgoogle.com/models/6RRi4r4nK/";
+      let model, webcam, labelContainer, maxPredictions;
+      let lastLabel = "";
+      let fullText = ""; // Chuỗi trống để lưu các kết quả className
+      let lastPredictionTime = 0;
+
+      async function init() {
+        try {
+          const modelURL = URL + "model.json";
+          const metadataURL = URL + "metadata.json";
+
+          model = await tmImage.load(modelURL, metadataURL);
+          maxPredictions = model.getTotalClasses();
+
+          webcam = new tmImage.Webcam(200, 200, true);
+          await webcam.setup();
+          await webcam.play();
+          window.requestAnimationFrame(loop);
+
+          document.getElementById("webcam-container").appendChild(webcam.canvas);
+          labelContainer = document.getElementById("label-container");
+
+          const labelElement = document.createElement("span");
+          labelElement.id = "label-text";
+          labelContainer.appendChild(labelElement);
+        } catch (error) {
+          console.error("Webcam không thể khởi động: ", error);
+        }
+      }
+
+      async function loop() {
+        webcam.update();
+        await predict();
+        window.requestAnimationFrame(loop);
+      }
+
+      async function predict() {
+        const currentTime = new Date().getTime();
+
+        // Chỉ nhận diện khi đã qua 3 giây kể từ lần nhận diện cuối
+        if (currentTime - lastPredictionTime > 3000) {
+          const predictions = await model.predictTopK(webcam.canvas, 1);
+          const label = predictions[0].className;
+          const probability = predictions[0].probability * 100;
+
+          if (label !== lastLabel) {
+            lastLabel = label;
+            responsiveVoice.speak(label, "UK English Male");
+
+            // Lưu className vào chuỗi fullText
+            fullText += " " + label;
+
+            // Cập nhật thời gian nhận diện mới
+            lastPredictionTime = currentTime;
+          }
+
+          document.getElementById("label-text").innerText = `${label}: ${probability.toFixed(2)}%`;
+        }
+      }
+
+      function stopRecognition() {
+        // Dừng nhận diện và đọc câu ghép từ className
+        if (fullText.trim()) {
+          responsiveVoice.speak(fullText.trim(), "UK English Male");
+        }
+      }
+    </script>
+  </body>
+</html>
