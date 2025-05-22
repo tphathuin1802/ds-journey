@@ -27,42 +27,9 @@ Data-Science is a repository containing my data science projects, showcasing my 
 - **Version Control**:
   - Git & GitHub
 
-## Installation
+## ⚙️ Setup Instructions
 
-- Clone the repository:
+- 🔧 Clone the repository:
   ```bash
   git clone https://github.com/tphathuin1802/data-science.git
   cd data-science
-
-- Set up a virtual environment:
-  Copy
-  python -m venv venv
-  source venv/bin/activate  # On Windows: venv\Scripts\activate
-  Install dependencies:
-  bash
-
-Copy
-pip install -r requirements.txt
-Note: Ensure you have a requirements.txt file with necessary libraries (e.g., pandas, matplotlib, seaborn). If not, install them manually using pip install pandas numpy matplotlib seaborn scikit-learn.
-Usage
-Open Jupyter Notebook:
-bash
-
-Copy
-jupyter notebook
-Navigate to the desired notebook (e.g., Project_Name.ipynb) in the repository.
-Run the cells sequentially to:
-Load and process datasets.
-Generate visualizations or models.
-Explore the output to understand data insights.
-Refer to individual project folders or notebooks for specific instructions.
-Contributing
-Fork the repository.
-Create a new branch for your changes.
-Submit a pull request with clear documentation of your updates.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-Contact
-GitHub: tphathuin1802
-Email: [your-email@example.com] (replace with your actual email)
-LinkedIn: [Your LinkedIn Profile] (replace with your actual LinkedIn URL, if applicable)
